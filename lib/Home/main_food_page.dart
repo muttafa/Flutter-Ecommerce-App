@@ -54,6 +54,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 )
             ),
           ),
+          SizedBox(height: 30,),
           FoodPageBody(),
         ],
       )

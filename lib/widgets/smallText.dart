@@ -10,7 +10,7 @@ class SmallText extends StatelessWidget {
   SmallText({Key? key,
     required this.text,
     this.color = const Color (0xFFa9a29f),
-    this.size = 20,
+    this.size = 15,
     this.overFlow = TextOverflow.ellipsis,
 
   }) : super(key: key);
