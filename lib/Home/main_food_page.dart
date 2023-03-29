@@ -1,3 +1,4 @@
+import 'package:ecommerce/Home/food_page_body.dart';
 import 'package:ecommerce/widgets/my_text.dart';
 import 'package:ecommerce/widgets/smallText.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       Column(
                         children: [
                           MyText(text: "Region",color: AppColors.maincolorl,size: 30,),
-                          SmallText(text: "City",size: 18,)
+                          Row(
+                            children: [
+                              SmallText(text: "City",size: 18,),
+                              Icon(Icons.arrow_drop_down_rounded)
+                            ],
+                          )
 
                         ],
                       ),
@@ -48,6 +54,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 )
             ),
           ),
+          FoodPageBody(),
         ],
       )
     );
