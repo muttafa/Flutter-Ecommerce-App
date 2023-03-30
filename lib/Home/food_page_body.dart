@@ -1,5 +1,6 @@
-import 'dart:ffi';
 
+
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/widgets/icon_and_text_widget.dart';
 import 'package:ecommerce/widgets/my_text.dart';
@@ -42,16 +43,30 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Column(
+      children: [
+        Container(
       height: 320,
       child: PageView.builder(
         controller: pageController,
-          itemCount: 5,
-          itemBuilder: (context,position){
-            return _buildPageItem(position);
-          },
+        itemCount: 5,
+        itemBuilder: (context,position){
+          return _buildPageItem(position);
+        },
       ),
 
+    ),
+        new DotsIndicator(
+        dotsCount: 5,
+        position: _currentPageValue,
+        decorator: DotsDecorator(
+        size: const Size.square(9.0),
+        activeColor: AppColors.maincolorl,
+        activeSize: const Size(18.0, 9.0),
+        activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+        ),
+        )
+      ],
     );
 
   }
@@ -99,8 +114,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               height: 120,
               margin: EdgeInsets.only(left: 30,right: 30,bottom: 30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
+                boxShadow: [
+                  BoxShadow(color: Color(0xFFe8e8e8),
+                  blurRadius: 5,
+                    offset: Offset(0,5)
+                  )
+                ]
               ),
               child: Container(
                 padding: EdgeInsets.only(top:15 , left: 15, right: 15),
@@ -142,6 +163,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
             ),
           ),
+
         ],
     ),
       );
@@ -149,3 +171,5 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
 
 }
+
+
