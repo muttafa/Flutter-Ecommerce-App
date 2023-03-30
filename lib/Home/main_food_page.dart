@@ -27,12 +27,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     children: [
                       Column(
                         children: [
-                          MyText(text: "Turkey",color: AppColors.maincolorl,size: 30,),
+                          MyText(text: "Turkey",color: AppColors.maincolorl,),
                           Row(
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 15),
-                                child: SmallText(text: "Istanbul",size: 15,),
+                                child: SmallText(text: "Istanbul",),
                               ),
                               Icon(Icons.arrow_drop_down_rounded)
                             ],

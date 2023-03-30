@@ -1,16 +1,16 @@
+import 'package:ecommerce/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:ecommerce/utils/dimensions.dart';
 class SmallText extends StatelessWidget {
   Color? color;
   final String text;
-  double size;
+  double size = Dimensions.smallTextSize;
   TextOverflow overFlow;
 
   SmallText({Key? key,
     required this.text,
     this.color = const Color (0xFFa9a29f),
-    this.size = 15,
     this.overFlow = TextOverflow.ellipsis,
 
   }) : super(key: key);

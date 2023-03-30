@@ -95,7 +95,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         children: [
           Container(
             height: Dimensions.bannerImageHeight,
-            margin: EdgeInsets.only(left: 10,right: 10),
+            margin: EdgeInsets.only(left: Dimensions.margin10,right: Dimensions.margin10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: index.isEven? Color(0xFF69C5DF):Color(0xFF9294cc),
@@ -112,7 +112,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             child: Container(
 
               height: Dimensions.bannerTextHeight,
-              margin: EdgeInsets.only(left: 30,right: 30,bottom: 30),
+              margin: EdgeInsets.only(left: Dimensions.margin30,right: Dimensions.margin30,bottom: Dimensions.margin30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
@@ -132,7 +132,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         children: [
                           MyText(text: "Exquisite Turkish food"),
                         ]),
-                    SizedBox(height: 10,),
+                    SizedBox(height: Dimensions.margin10,),
                     Row(
                       children: [
                         Wrap(
@@ -143,9 +143,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                 size: 15,)
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: Dimensions.margin10,),
                         SmallText(text: "4.5"),
-                        SizedBox(width: 10,),
+                        SizedBox(width: Dimensions.margin10,),
                         SmallText(text: "1287 comments"),
                       ],
                     ),
