@@ -22,9 +22,9 @@ class IconAndTestWidget extends StatelessWidget {
               Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(icon,color: iconColor,),
-                      SizedBox(width: 5,),
                       text,
                     ],
                   )
