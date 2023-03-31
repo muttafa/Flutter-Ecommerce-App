@@ -91,11 +91,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           ),
         ),
         // List of product
-        Container(
-          height: 900,
-          margin: EdgeInsets.only(bottom: Dimensions.margin30),
-          child: ListView.builder(
-              physics: AlwaysScrollableScrollPhysics(),
+
+
+
+       ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: 15,
               itemBuilder: (context,index)
@@ -181,7 +181,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 );
               }
           ),
-        ),
+
         SizedBox(height: Dimensions.margin20,)
       ],
     );

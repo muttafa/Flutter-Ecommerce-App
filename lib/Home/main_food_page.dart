@@ -59,7 +59,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
           ),
           SizedBox(height: 30,),
           Expanded(child: SingleChildScrollView(
-            physics: NeverScrollableScrollPhysics(),
+            physics: AlwaysScrollableScrollPhysics(),
             child: FoodPageBody(),
           ))
         ],
