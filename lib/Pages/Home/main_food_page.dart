@@ -1,9 +1,10 @@
-import 'package:ecommerce/Home/food_page_body.dart';
+
 import 'package:ecommerce/widgets/my_text.dart';
 import 'package:ecommerce/widgets/smallText.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import 'package:ecommerce/utils/colors.dart';
+import 'food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
