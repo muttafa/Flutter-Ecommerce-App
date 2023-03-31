@@ -65,6 +65,24 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         activeSize: const Size(18.0, 9.0),
         activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         ),
+        ),
+        SizedBox(height: Dimensions.margin20,),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.margin30),
+          child: Row(
+            children: [
+              MyText(text: "Popular"),
+              SizedBox(width: Dimensions.margin10,),
+              Container(
+                child: SmallText(text: ".",),
+              ),
+              SizedBox(width: Dimensions.margin10,),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, Dimensions.margin5, 0, 0),
+                child: SmallText(text: "Food Pairing"),
+              ),
+            ],
+          ),
         )
       ],
     );
