@@ -7,12 +7,13 @@ class SmallText extends StatelessWidget {
   final String text;
   double size = Dimensions.smallTextSize;
   TextOverflow overFlow;
+  TextAlign? align;
 
   SmallText({Key? key,
     required this.text,
     this.color = const Color (0xFFa9a29f),
     this.overFlow = TextOverflow.ellipsis,
-
+    this.align,
   }) : super(key: key);
 
   @override

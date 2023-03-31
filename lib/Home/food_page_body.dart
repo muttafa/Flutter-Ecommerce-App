@@ -1,3 +1,5 @@
+
+
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/utils/dimensions.dart';
@@ -90,8 +92,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ),
         // List of product
         Container(
-          height: 700,
-          margin: EdgeInsets.only(bottom: Dimensions.margin10),
+          height: 900,
+          margin: EdgeInsets.only(bottom: Dimensions.margin30),
           child: ListView.builder(
               physics: AlwaysScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -99,7 +101,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               itemBuilder: (context,index)
               {
                 return Container(
-                  margin: EdgeInsets.fromLTRB(Dimensions.margin20, Dimensions.margin20, Dimensions.margin20, 0),
+                  margin: EdgeInsets.only(left: Dimensions.margin20,bottom: Dimensions.margin10),
                   child: Row(
                     children: [
                       // image section
@@ -116,6 +118,63 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                             )
                         ),
                       ),
+                      // Text Section
+                      Container(
+                        padding: EdgeInsets.only(left: Dimensions.margin10),
+                        height: Dimensions.height100,
+                        width: Dimensions.width250,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(topRight: Radius.circular(Dimensions.radius20),bottomRight: Radius.circular(Dimensions.radius20)),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                            blurRadius: 5,
+                            color: Color(0xFFe8e8e8),
+                            offset: Offset(0,5),
+                          ),
+                          ]
+                        ),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width : Dimensions.sizedBox210,
+                                      child: MyText(
+                                        text: "Nefis Kayseri Mantısı",
+                                        overFlow: TextOverflow.ellipsis,
+                                        ),
+                                    ),
+
+                                  ],
+                                ),
+                                SizedBox(height: Dimensions.margin10,),
+                                Row(
+                                  
+                                  children: [
+                                    
+                                    SmallText(text: "with ground beef",align: TextAlign.left,),
+                                    SizedBox(width: Dimensions.with98,),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    IconAndTestWidget(icon: Icons.add_circle,iconColor: Colors.deepOrangeAccent, text: SmallText(text: "Normal",)),
+                                    IconAndTestWidget(icon: Icons.location_on,iconColor: Colors.greenAccent, text: SmallText(text: "3km")),
+                                    IconAndTestWidget(icon: Icons.access_time_rounded, iconColor: Colors.deepOrange, text: SmallText(text: "35min",)),
+                                  ],
+                                )
+
+                              ],
+                            )
+
+                          ],
+
+                        )
+                      )
 
                     ],
                   ),
@@ -123,6 +182,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               }
           ),
         ),
+        SizedBox(height: Dimensions.margin20,)
       ],
     );
 

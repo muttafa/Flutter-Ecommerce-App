@@ -20,5 +20,10 @@ class Dimensions {
     static double radius20 = screenHeight/43.3;
 
     static double height120 = screenHeight/7.21;
+    static double height100 = screenHeight/8.66;
+    static double width250 = screenHeight/3.46;
+    static double with98 = screenHeight/8.83;
+
+    static double sizedBox210 = screenHeight/4.12;
 
 }

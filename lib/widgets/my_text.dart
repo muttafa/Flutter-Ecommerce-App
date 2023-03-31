@@ -7,12 +7,13 @@ class MyText extends StatelessWidget {
    final String text;
    double size= Dimensions.myTextSize;
    TextOverflow overFlow;
-
+   TextAlign? align;
 
   MyText({Key? key,
     this.color = const Color (0xFF332d2b),
     required this.text,
     this.overFlow = TextOverflow.ellipsis,
+    this.align,
   }) : super(key: key);
 
 
@@ -21,6 +22,8 @@ class MyText extends StatelessWidget {
     return Text(
       text,
       overflow: overFlow,
+      maxLines: 1,
+      softWrap: false,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
           color: this.color,
