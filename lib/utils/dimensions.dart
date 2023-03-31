@@ -17,4 +17,8 @@ class Dimensions {
     static double smallTextSize = screenHeight/57.7;
     static double myTextSize = screenHeight/43.3;
 
+    static double radius20 = screenHeight/43.3;
+
+    static double height120 = screenHeight/7.21;
+
 }

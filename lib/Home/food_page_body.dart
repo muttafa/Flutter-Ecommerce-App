@@ -45,6 +45,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Column(
 
       children: [
+        // Slider
         Container(
           height: Dimensions.bannerContainerHeight,
           child: PageView.builder(
@@ -56,6 +57,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       ),
 
     ),
+        // Dots for slider
         new DotsIndicator(
         dotsCount: 5,
         position: _currentPageValue,
@@ -67,6 +69,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ),
         ),
         SizedBox(height: Dimensions.margin20,),
+        // Popular
         Container(
           margin: EdgeInsets.only(left: Dimensions.margin30),
           child: Row(
@@ -74,6 +77,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               MyText(text: "Popular"),
               SizedBox(width: Dimensions.margin10,),
               Container(
+                margin: EdgeInsets.only(bottom: 3),
                 child: SmallText(text: ".",),
               ),
               SizedBox(width: Dimensions.margin10,),
@@ -83,7 +87,42 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
             ],
           ),
-        )
+        ),
+        // List of product
+        Container(
+          height: 700,
+          margin: EdgeInsets.only(bottom: Dimensions.margin10),
+          child: ListView.builder(
+              physics: AlwaysScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 15,
+              itemBuilder: (context,index)
+              {
+                return Container(
+                  margin: EdgeInsets.fromLTRB(Dimensions.margin20, Dimensions.margin20, Dimensions.margin20, 0),
+                  child: Row(
+                    children: [
+                      // image section
+                      Container(
+                        width: Dimensions.height120,
+                        height: Dimensions.height120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(Dimensions.radius20),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  "assets/image/manti.jpg",
+                                )
+                            )
+                        ),
+                      ),
+
+                    ],
+                  ),
+                );
+              }
+          ),
+        ),
       ],
     );
 
