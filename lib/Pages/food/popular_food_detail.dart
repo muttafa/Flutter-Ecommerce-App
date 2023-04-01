@@ -14,6 +14,7 @@ class PopularFoodDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -95,23 +96,48 @@ class PopularFoodDetail extends StatelessWidget {
           top: Dimensions.margin10,
         ),
         decoration: BoxDecoration(
-          color: Color(0xFFD4DBE2),
+          color: Color(0xFFF0EEED),
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(Dimensions.radius20),
-              topLeft: Radius.circular(Dimensions.radius20)
+              topRight: Radius.circular(Dimensions.radius20*2),
+              topLeft: Radius.circular(Dimensions.radius20*2)
           )
         ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: 50,
+                padding: EdgeInsets.only(left: Dimensions.margin10,right: Dimensions.margin10),
+                height: Dimensions.height80,
+                width: Dimensions.width120,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimensions.radius20),
+                  borderRadius: BorderRadius.circular(Dimensions.radius20*2),
                   color: Colors.white,
-
+                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.remove),
+                    MyText(text: "5",),
+                    Icon(Icons.add)
+                  ],
                 ),
-              )
+              ),
+              Container(
+                height: Dimensions.height80,
+                width: Dimensions.width200,
+
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(Dimensions.radius20*2),
+                  color: AppColors.maincolorl,
+                ),
+                child: Center(
+                  child: MyText(
+                    text: "£15.85 Add to cart",
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
       ),

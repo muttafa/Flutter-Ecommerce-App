@@ -32,6 +32,9 @@ class Dimensions {
     static double backgroundImageHeight = screenHeight/2.47;
 
     static double with20 = screenHeight/43.3;
+    static double height80 = screenHeight/11.07;
+    static double width200 = screenHeight/4.33;
+    static double width120 = screenHeight/6.9;
 
     static double iconSize16 = screenHeight/55.3;
 
