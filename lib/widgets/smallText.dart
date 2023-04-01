@@ -5,15 +5,19 @@ import 'package:ecommerce/utils/dimensions.dart';
 class SmallText extends StatelessWidget {
   Color? color;
   final String text;
-  double size = Dimensions.smallTextSize;
+  double? size;
   TextOverflow overFlow;
   TextAlign? align;
+  double? height;
+
 
   SmallText({Key? key,
     required this.text,
     this.color = const Color (0xFFa9a29f),
     this.overFlow = TextOverflow.ellipsis,
     this.align,
+    this.size,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -25,6 +29,7 @@ class SmallText extends StatelessWidget {
       maxLines: 60,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
+          height: height,
           fontSize: size,
           fontWeight: FontWeight.w400,
           color: color,
