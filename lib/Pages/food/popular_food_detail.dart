@@ -29,7 +29,7 @@ class PopularFoodDetail extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          "assets/image/kebab.jpg",
+                          "assets/image/baklava.jpg",
                         ),
                         fit: BoxFit.cover,
                       )

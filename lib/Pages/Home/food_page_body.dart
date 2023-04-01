@@ -200,7 +200,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                        "assets/image/kebab.jpg"
+                        "assets/image/baklava.jpg"
                     )
                 )
             ),

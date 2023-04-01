@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyText extends StatelessWidget {
    Color? color;
    final String text;
-   double size= Dimensions.myTextSize;
+   double? size;
    TextOverflow overFlow;
    TextAlign? align;
 
@@ -14,6 +14,7 @@ class MyText extends StatelessWidget {
     required this.text,
     this.overFlow = TextOverflow.ellipsis,
     this.align,
+    this.size,
   }) : super(key: key);
 
 
