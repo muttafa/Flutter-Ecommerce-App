@@ -1,5 +1,5 @@
 
-
+import 'package:ecommerce/widgets/app_column.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:ecommerce/utils/colors.dart';
 import 'package:ecommerce/utils/dimensions.dart';
@@ -136,40 +136,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         ),
                         child: Row(
                           children: [
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    SizedBox(
-                                      width : Dimensions.sizedBox210,
-                                      child: MyText(
-                                        text: "Nefis Kayseri Mantısı",
-                                        overFlow: TextOverflow.ellipsis,
-                                        ),
-                                    ),
-
-                                  ],
-                                ),
-                                SizedBox(height: Dimensions.margin10,),
-                                Row(
-                                  
-                                  children: [
-                                    
-                                    SmallText(text: "with ground beef",align: TextAlign.left,),
-                                    SizedBox(width: Dimensions.with98,),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    IconAndTestWidget(icon: Icons.add_circle,iconColor: Colors.deepOrangeAccent, text: SmallText(text: "Normal",)),
-                                    IconAndTestWidget(icon: Icons.location_on,iconColor: Colors.greenAccent, text: SmallText(text: "3km")),
-                                    IconAndTestWidget(icon: Icons.access_time_rounded, iconColor: Colors.deepOrange, text: SmallText(text: "35min",)),
-                                  ],
-                                )
-
-                              ],
-                            )
+                            AppColumn(
+                              comment: "200 comment",
+                              header: "Burası Çalıştı",
+                              point: "3.8",
+                              starCount: 4,
+                              icon1: Icons.circle_sharp,
+                              iconColor1: Colors.orangeAccent,
+                              iconDesc1: SmallText(text: 'Normal',),
+                              icon2: Icons.location_on,
+                              iconColor2: Colors.greenAccent ,
+                              iconDesc2: SmallText(text: "18km",),
+                              icon3: Icons.access_time_rounded,
+                              iconColor3: Colors.deepOrangeAccent,
+                              iconDesc3: SmallText(text: "32min"),
+                            ),
 
                           ],
 
@@ -242,40 +223,20 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
               child: Container(
                 padding: EdgeInsets.only(top:15 , left: 15, right: 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                        children: [
-                          MyText(text: "Exquisite Turkish food"),
-                        ]),
-                    SizedBox(height: Dimensions.margin10,),
-                    Row(
-                      children: [
-                        Wrap(
-                          children: List.generate(5,
-                                  (index) => Icon(
-                                Icons.star,
-                                color: AppColors.maincolorl,
-                                size: 15,)
-                          ),
-                        ),
-                        SizedBox(width: Dimensions.margin10,),
-                        SmallText(text: "4.5"),
-                        SizedBox(width: Dimensions.margin10,),
-                        SmallText(text: "1287 comments"),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        IconAndTestWidget(icon: Icons.circle_sharp,iconColor: Colors.orangeAccent, text: SmallText(text: 'Normal',)),
-                        IconAndTestWidget(icon: Icons.location_on, iconColor: Colors.greenAccent , text: SmallText(text: "18km",)),
-                        IconAndTestWidget(icon: Icons.access_time_rounded,iconColor: Colors.deepOrangeAccent, text: SmallText(text: "32min"))
-
-                      ],
-                    ),
-
-                  ],
+                child: AppColumn(
+                  comment: "200 comment",
+                  header: "Burası Çalıştı",
+                  point: "3.8",
+                  starCount: 4,
+                  icon1: Icons.circle_sharp,
+                  iconColor1: Colors.orangeAccent,
+                  iconDesc1: SmallText(text: 'Normal',),
+                  icon2: Icons.location_on,
+                  iconColor2: Colors.greenAccent ,
+                  iconDesc2: SmallText(text: "18km",),
+                  icon3: Icons.access_time_rounded,
+                  iconColor3: Colors.deepOrangeAccent,
+                  iconDesc3: SmallText(text: "32min"),
                 ),
               ),
             ),
