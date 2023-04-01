@@ -18,6 +18,7 @@ class PopularFoodDetail extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
+            // Background İmage
             Positioned(
                 left: 0,
                 right: 0,
@@ -33,6 +34,7 @@ class PopularFoodDetail extends StatelessWidget {
                       )
                   ),
                 )),
+            //Detail
             Positioned(
                 left: Dimensions.with20,
                 right: Dimensions.with20,
@@ -83,7 +85,7 @@ class PopularFoodDetail extends StatelessWidget {
 
                     ],
                   )
-                ))
+                )),
           ],
         ),
         ),
