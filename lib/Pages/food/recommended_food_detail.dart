@@ -3,6 +3,7 @@ import 'package:ecommerce/widgets/app_icons.dart';
 import 'package:ecommerce/widgets/expandable_text.dart';
 import 'package:ecommerce/widgets/my_text.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../utils/colors.dart';
 
 class RecommendedFoodDetail extends StatelessWidget {
@@ -72,14 +73,45 @@ class RecommendedFoodDetail extends StatelessWidget {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              AppIcons(icon: Icons.remove,iconColor: AppColors.maincolorl,),
-              MyText(text: "£15.85 X 0"),
-              AppIcons(icon: Icons.add,iconColor: AppColors.maincolorl,),
-            ],
-          )
+          Container(
+            padding: EdgeInsets.only(left:Dimensions.sizedBox30,right: Dimensions.sizedBox30,bottom: Dimensions.sizedBox30, ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppIcons(iconSize: Dimensions.iconSize36,icon: Icons.remove,iconColor: Colors.white,backgroundColor: AppColors.maincolorl,),
+                MyText(text: "£15.85 X 0",size: Dimensions.font30,),
+                AppIcons(iconSize: Dimensions.iconSize36,icon: Icons.add,iconColor: Colors.white,backgroundColor: AppColors.maincolorl,),
+             ],
+            ),
+          ),
+          Container(
+            height: 100,
+            decoration: BoxDecoration(
+
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(Dimensions.radius40),
+                  topRight: Radius.circular(Dimensions.radius40)
+              ),
+              color: AppColors.buttonBackgroundColor
+            ),
+            child: Container(
+                  padding: EdgeInsets.only(right: 30,left: 30) ,
+                  child: Row(
+                    children: [
+                      AppIcons(
+                        icon: FontAwesomeIcons.heart,
+                        iconSize: 60,
+                        size: 50,
+                        backgroundColor: AppColors.buttonBackgroundColor,
+                        iconColor: AppColors.maincolorl,
+                      ),
+
+                    ],
+                  ),
+                )
+
+            ),
+
         ],
       ),
     );

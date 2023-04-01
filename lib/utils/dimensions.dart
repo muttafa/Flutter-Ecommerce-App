@@ -31,15 +31,21 @@ class Dimensions {
     static double iconSize16 = screenHeight/55.3;
     static double font16 = screenHeight/55.3;
     static double font26 = screenHeight/33.3;
+    static double font30 = screenHeight/28.8;
 
     // radius
     static double radius20 = screenHeight/43.3;
+    static double radius40 = screenHeight/21.65;
 
     // sized box
     static double sizedBox210 = screenHeight/4.12;
+    static double sizedBox30 = screenHeight/28.8;
+
 
     // Image size
     static double backgroundImageHeight = screenHeight/2.47;
+    //Icon size
+    static double iconSize36 = screenHeight/24;
 
 
 
