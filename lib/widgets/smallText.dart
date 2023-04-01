@@ -19,8 +19,10 @@ class SmallText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+
       text,
       overflow: overFlow,
+      maxLines: 60,
       style: GoogleFonts.roboto(
         textStyle: TextStyle(
           fontSize: size,

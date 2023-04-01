@@ -1,5 +1,6 @@
 import 'package:ecommerce/widgets/app_column.dart';
 import 'package:ecommerce/widgets/app_icons.dart';
+import 'package:ecommerce/widgets/expandable_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/colors.dart';
@@ -81,11 +82,17 @@ class PopularFoodDetail extends StatelessWidget {
                       ),
                       SizedBox(height: Dimensions.margin20,),
                       MyText(text: "Introduce",),
-
+                      Expanded(
+                        child: SingleChildScrollView(
+                            physics: AlwaysScrollableScrollPhysics(),
+                            child: ExpandableText(
+                                Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie, purus ac posuere luctus, justo nisi pharetra neque, sed faucibus orci lectus ut ipsum. Vestibulum nec auctor metus. Maecenas veorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie, purus ac posuere luctus, justo nisi pharetra neque, sed faucibus orci lectusorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie, purus ac posuere luctus, justo nisi pharetra neque, sed faucibus orci lectus ut ipsum. Vestibulum nec auctor metus. Maecenas vestibulum placera ut ipsum. Vestibulum nec auctor metus. Maecenas vestibulum placerastibulum placerat mauris a molestie. Pellentesque dictum fermentum lectus molestie sodales. Curabitur nec sem sit amet eros semper egestas. Phasellus rhoncus.MustafaMustafaMustafa Mustafa")),
+                      )
 
                     ],
                   )
                 )),
+
           ],
         ),
         ),
@@ -135,7 +142,7 @@ class PopularFoodDetail extends StatelessWidget {
                 ),
                 child: Center(
                   child: MyText(
-                    text: "£15.85 Add to cart",
+                    text: "£15.85 | Add to cart",
                     color: Colors.white,
                   ),
                 ),
